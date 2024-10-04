@@ -1,6 +1,9 @@
 # Avatars Homework
 
 > 이 과제에서는 아바타 이미지와 상태 정보를 HTML과 CSS로 구현하고 성능 최적화를 적용하였습니다.
+## 💥 결과물 💥
+![image](https://github.com/user-attachments/assets/3723a46e-7de8-45fd-bb01-8ae4894a1ca1)
+
 
 ## 1. Avatart 이미지
 
@@ -29,3 +32,5 @@
 - `span` 태그로 아바타 이미지 우측 하단에 상태 표시 아이콘을 추가했습니다.
 - 활성 상태: 녹색 (`#4CFE88`)
 - 비활성화 상태: 회색 (`#DBDBDB`)
+
+
