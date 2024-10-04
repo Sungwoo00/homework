@@ -5,3 +5,7 @@
 ## about me
 
 [여기로 오세요~](https://github.com/Sungwoo00/homework/blob/main/about-me.md)
+
+## Avatars
+
+[Avatars Homework](https://github.com/Sungwoo00/homework/blob/main/md/avartars.md)
