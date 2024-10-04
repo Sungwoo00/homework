@@ -1,0 +1,59 @@
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+section {
+  height: 200px;
+  width: 360px;
+  padding: 10%;
+  border: 1px solid rgba(184, 184, 184, 0.96);
+  background-color: #f7f9f8;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 10px;
+}
+
+img.avatars {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+span {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.active-status {
+  background-color: #4cfe88;
+}
+
+.deactivate-status {
+  background-color: #dbdbdb;
+}
+
+.float-layout .avatar-wrapper {
+  float: left;
+}
+
+.flex-layout {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
