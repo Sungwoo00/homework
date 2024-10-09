@@ -6,9 +6,9 @@
 ### 피드백 전
 ![image](https://github.com/user-attachments/assets/3723a46e-7de8-45fd-bb01-8ae4894a1ca1)
 ### 피드백 후 
+> [🔎 결과물 확인은 여기로~~~](https://sungwoo00.github.io/homework/avatars/avatars.html)
 >![image](https://github.com/user-attachments/assets/9c950762-2b56-455d-9ea3-a528f149b269)
 
-- [🔎결과물 확인은 여기로~!](https://sungwoo00.github.io/homework/avatars/avatars.html)
 
 
 ### 1. Avatars 이미지
