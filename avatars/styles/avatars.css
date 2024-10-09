@@ -10,8 +10,7 @@
 }
 
 section {
-  height: 200px;
-  width: 360px;
+  max-width: 360px;
   padding: 10%;
   border: 1px solid rgba(184, 184, 184, 0.96);
   background-color: #f7f9f8;
@@ -48,12 +47,27 @@ span {
   background-color: #dbdbdb;
 }
 
-.float-layout .avatar-wrapper {
-  float: left;
-}
-
 .flex-layout {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+@supports not (display: flex) {
+  /* @media all { */
+  .flex-layout {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .flex-layout .avatar-wrapper {
+    float: left;
+  }
+
+  .flex-layout::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 }
