@@ -1,1 +1,177 @@
-/* CSS를 활용하여 레이아웃 및 스타일링을 완성해주세요 */
+@import './../../common/a11y.css';
+
+:root {
+  --font-size-base: 16px;
+  --font-color: #121212;
+  --focus-color: #03cf5d;
+  --focus-outline-color: #24388d;
+  --input-border-color: #dadada;
+  --input-focus-bg: #e9f0fd;
+  --button-bg: #03cf5d;
+  --button-color: #fff;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  color: var(--font-color);
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem;
+}
+
+.Company {
+  margin-bottom: 2rem;
+}
+
+.Company svg {
+  width: 14.375rem;
+  height: auto;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.login-form__input {
+  font-size: 0.875rem;
+  width: 100%;
+  height: 2.8125rem;
+  margin-bottom: 0.625rem;
+  border: 0.0625rem solid var(--input-border-color);
+  background-color: #fff;
+  padding: 0 0.625rem;
+  box-sizing: border-box;
+}
+
+.login-form__input:focus {
+  border-color: var(--focus-color);
+  background-color: var(--input-focus-bg);
+  outline: 0.125rem solid var(--focus-outline-color);
+}
+
+.error-message {
+  display: none;
+  color: red;
+  font-size: 12px;
+  margin-bottom: 0.625rem;
+  margin-left: 0.875rem;
+}
+
+#login-id:focus:invalid + #login-id-error {
+  display: block;
+}
+
+#login-password:focus:invalid + #login-password-error {
+  display: block;
+}
+
+.login-form__submit {
+  font-size: 1rem;
+  width: 100%;
+  height: 2.8125rem;
+  background-color: var(--button-bg);
+  color: var(--button-color);
+  margin-top: 1.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form__submit:focus {
+  outline: 0.125rem solid var(--focus-outline-color);
+}
+
+.login-form__status {
+  width: 100%;
+  margin-top: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.login-form__status-checkbox {
+  display: none;
+}
+
+.login-form__status-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.login-form__status-label::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.3125rem;
+  background-image: url('./../../assets/images/unchecked.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.login-form__status-checkbox:checked + .login-form__status-label::before {
+  background-image: url('./../../assets/images/checked.svg');
+}
+
+.ip-security-container {
+  margin-left: auto;
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: 1rem;
+  display: none;
+}
+
+.ip-security-link:focus,
+.ip-security-link:hover {
+  text-decoration: none;
+  color: var(--focus-outline-color);
+}
+
+@media (min-width: 48rem) {
+  .login-container {
+    width: 31.25rem;
+  }
+
+  .login-form__status {
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .ip-security-container {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .ip-security-link {
+    color: inherit;
+    text-decoration: none;
+    justify-content: center;
+    display: inline-block;
+    margin-left: auto;
+    text-align: right;
+  }
+  .ip-security-status-text {
+    color: gray;
+    margin-left: 0.1875rem;
+  }
+}
