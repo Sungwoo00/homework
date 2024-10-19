@@ -1,3 +1,195 @@
-@import url(card-component.css);
+/* @import url(card-component.css); */
+@import './../../common/a11y.css';
+@import url(./theme.css);
 
 /* 카드 레이아웃 */
+.cards {
+  display: grid;
+  inline-size: 100%;
+  gap: var(--large-spacing);
+  text-align: center;
+  grid-template-columns: 1fr;
+
+  section {
+    block-size: var(--size);
+    position: relative;
+
+    color: var(--white);
+    background-size: cover;
+    background-position: center center;
+
+    &:nth-child(even) {
+      color: var(--black);
+    }
+
+    h2 {
+      font-size: var(--large-text);
+      margin-bottom: var(--small-spacing);
+    }
+
+    p {
+      margin: 0;
+      font-size: var(--base-text);
+      line-height: var(--line-normal);
+      margin-bottom: var(--x-small-spacing);
+    }
+
+    .product-info {
+      .release-date {
+        color: var(--gray);
+        font-size: var(--small-text);
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    margin-bottom: var(--large-spacing);
+    block-size: var(--size);
+    background-size: cover;
+    background-position: center;
+
+    .button {
+      display: inline-block;
+      font-size: var(--xx-small-text);
+      width: 5rem;
+      padding: var(--x-small-spacing) 0;
+      text-decoration: none;
+      background-color: var(--blue-100);
+      border: 1px solid var(--blue-100);
+      border-radius: 1.5rem;
+      color: var(--white);
+    }
+
+    &:nth-of-type(odd) {
+      .more-detail {
+        background-color: var(--blue-100);
+        color: var(--white);
+      }
+
+      .view-price {
+        color: var(--blue-100);
+        background-color: transparent;
+        border-color: var(--blue-100);
+      }
+    }
+
+    &:nth-of-type(even) {
+      .more-detail {
+        background-color: var(--black);
+        border: 1px solid var(--black);
+        color: var(--white);
+      }
+
+      .view-price {
+        color: var(--black);
+        background-color: transparent;
+        border-color: var(--black);
+      }
+    }
+  }
+}
+
+.card-1 {
+  background-image: url(./../products/ipad_pro.jpeg);
+}
+.card-2 {
+  background-image: url(./../products/ipad_air.jpeg);
+}
+.card-3 {
+  background-image: url(./../products/iphone15_pro.jpeg);
+}
+.card-4 {
+  background-image: url(./../products/iphone15.jpeg);
+}
+.card-5 {
+  background-image: url(./../products/apple_watch.jpeg);
+}
+.card-6 {
+  background-image: url(./../products/macbook_air.jpeg);
+}
+.card-7 {
+  background-image: url(./../products/airpods_pro.jpeg);
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+
+    .card-1 {
+      grid-column: span 2;
+      background-image: url(./../products/ipad_pro_wide.webp);
+    }
+
+    .card-2 {
+      grid-column: span 2;
+      background-image: url(./../products/ipad_air_wide.webp);
+    }
+
+    .card-3 {
+      grid-column: span 2;
+      background-image: url(./../products/iphone15_pro_wide.webp);
+    }
+
+    .card-4 {
+      grid-column: span 1;
+      background-image: url(./../products/iphone15.webp);
+    }
+
+    .card-5 {
+      grid-column: span 1;
+      background-image: url(./../products/apple_watch_2x.webp);
+    }
+
+    .card-6 {
+      grid-column: span 1;
+      background-image: url(./../products/macbook_air_2x.webp);
+    }
+
+    .card-7 {
+      grid-column: span 1;
+      background-image: url(./../products/airpods_pro_2x.webp);
+    }
+  }
+}
+
+/* min-resolution: 192dpi: 인치당 192개 이상의 도트를 가진 디스플레이를 대상으로 합니다. 이는 일반적인 2x 디스플레이의 해상도입니다.
+min-resolution: 2dppx: 'dppx'는 'dots per pixel'의 약자로, 1dppx가 표준 해상도입니다. 따라서 2dppx는 2배 해상도 디스플레이를 의미합니다. */
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .card-1 {
+    background-image: url(./../products/ipad_pro_2x.webp);
+  }
+  .card-2 {
+    background-image: url(./../products/ipad_air_2x.webp);
+  }
+  .card-3 {
+    background-image: url(./../products/iphone15_pro_2x.webp);
+  }
+  .card-4 {
+    background-image: url(./../products/iphone15.webp);
+  }
+  .card-5 {
+    background-image: url(./../products/apple_watch_2x.webp);
+  }
+  .card-6 {
+    background-image: url(./../products/macbook_air_2x.webp);
+  }
+  .card-7 {
+    background-image: url(./../products/airpods_pro_2x.webp);
+  }
+}
+
+@media (min-width: 1024px) and (min-resolution: 192dpi), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .card-1 {
+    background-image: url(./../products/ipad_pro_wide_2x.webp);
+  }
+  .card-2 {
+    background-image: url(./../products/ipad_air_wide_2x.webp);
+  }
+  .card-3 {
+    background-image: url(./../products/iphone15_pro_wide_2x.webp);
+  }
+}
