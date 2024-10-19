@@ -6,7 +6,6 @@
 .cards {
   display: grid;
   inline-size: 100%;
-  gap: var(--large-spacing);
   text-align: center;
   grid-template-columns: 1fr;
 
