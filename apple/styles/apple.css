@@ -140,17 +140,17 @@
 
     .card-5 {
       grid-column: span 1;
-      background-image: url(./../products/apple_watch_2x.webp);
+      background-image: url(./../products/apple_watch.webp);
     }
 
     .card-6 {
       grid-column: span 1;
-      background-image: url(./../products/macbook_air_2x.webp);
+      background-image: url(./../products/macbook_air.webp);
     }
 
     .card-7 {
       grid-column: span 1;
-      background-image: url(./../products/airpods_pro_2x.webp);
+      background-image: url(./../products/airpods_pro.webp);
     }
   }
 }
