@@ -156,8 +156,6 @@
   }
 }
 
-/* min-resolution: 192dpi: 인치당 192개 이상의 도트를 가진 디스플레이를 대상으로 합니다. 이는 일반적인 2x 디스플레이의 해상도입니다.
-min-resolution: 2dppx: 'dppx'는 'dots per pixel'의 약자로, 1dppx가 표준 해상도입니다. 따라서 2dppx는 2배 해상도 디스플레이를 의미합니다. */
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .card-1 {
     background-image: url(./../products/ipad_pro_2x.webp);
